@@ -10,6 +10,8 @@ class AvrGccAT7 < Formula
     sha256 "832ca6ae04636adbb430e865a1451adf6979ab44ca1c8374f61fba65645ce15c"
   end
 
+  keg_only "it might interfere with other version of avr-gcc. This is useful if you want to have multiple version of avr-gcc installed on the same machine"
+
   option "without-cxx", "Don't build the g++ compiler"
   option "with-gmp", "Build with gmp support"
   option "with-libmpc", "Build with libmpc support"
@@ -26,6 +28,7 @@ class AvrGccAT7 < Formula
 
   resource "avr-libc" do
     url "https://download.savannah.gnu.org/releases/avr-libc/avr-libc-2.0.0.tar.bz2"
+    mirror "http://download-mirror.savannah.gnu.org/releases/avr-libc/avr-libc-2.0.0.tar.bz2"
     sha256 "b2dd7fd2eefd8d8646ef6a325f6f0665537e2f604ed02828ced748d49dc85b97"
   end
 
